@@ -98,14 +98,13 @@ Esta función recoge los valores emitidos por StateFlow y los convierte en un es
 
 2) mutableStateOf y State
 mutableStateOf es una herramienta de Jetpack Compose que permite crear un estado observable por la interfaz.
-    • mutableStateOf: crea un estado que se puede modificar.
-    • State: permite consultar ese estado sin modificarlo.
+• mutableStateOf: crea un estado que se puede modificar.
+• State: permite consultar ese estado sin modificarlo.
 
 En MVVMSimple.kt:
     • _state es privado y permite modificar los datos.
     • state es público y permite acceder a ellos.
-Cuando cambia _state.value, Compose detecta el cambio y actualiza los elementos de la interfaz que dependen de ese estado.
-      
+Cuando cambia _state.value, Compose detecta el cambio y actualiza los elementos de la interfaz que dependen de ese estado.      
 A diferencia de StateFlow, no es necesario utilizar collectAsState(), porque mutableStateOf ya está integrado con el sistema de estados de Jetpack Compose.
 
 3) Diferencias entre ambos mecanismos
