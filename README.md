@@ -86,7 +86,6 @@ Estos mecanismos permiten gestionar el estado de una aplicación y notificar a l
 1) StateFlow y MutableStateFlow
 
 StateFlow es un mecanismo de Kotlin Coroutines que permite almacenar y observar un estado que puede cambiar con el tiempo.
-
     • MutableStateFlow: permite modificar el valor del estado.
     • StateFlow: permite consultar y observar el estado, pero no modificarlo directamente.
       
@@ -105,8 +104,7 @@ mutableStateOf es una herramienta de Jetpack Compose que permite crear un estado
 En MVVMSimple.kt:
     • _state es privado y permite modificar los datos.
     • state es público y permite acceder a ellos.
-      
-      Cuando cambia _state.value, Compose detecta el cambio y actualiza los elementos de la interfaz que dependen de ese estado.
+Cuando cambia _state.value, Compose detecta el cambio y actualiza los elementos de la interfaz que dependen de ese estado.
       
 A diferencia de StateFlow, no es necesario utilizar collectAsState(), porque mutableStateOf ya está integrado con el sistema de estados de Jetpack Compose.
 
